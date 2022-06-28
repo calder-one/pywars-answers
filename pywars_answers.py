@@ -50,6 +50,41 @@ def answer11(data):
 def answer12(data):
     # 'Read the list from data and return the 3rd element '
     return data[2]
+def answer13(data):
+    # 'Build a list of numbers starting at 1 and up to but not including the number in data(). '
+    return list(range(1, data))
+
+def answer14(data):
+    # 'Count the number of items in the list in data().  The answer is the number of items in the list.'
+    return len(data)
+
+def answer15(data):
+    # 'Split the data element based on the comma (",") delimiter and return the 10th element '
+    return data.split(",")[9]
+
+def answer16(data):
+    # 'The data element contains a line from an /etc/shadow file. The shadow file is a colon delimited file.  The 2nd field in the colon delimited field contains the password information
+    # The password information is a dollar sign delimited field with three parts.  The first part indicates what cypher is used.  The second part is the password salt.
+    # The last part is the password hash.   Retrieve the password salt for the root user.'
+    # 'root:$1$Kf2P11jN$370xDLmeGD9m4aF/ciIlC.:14425:0:99999:7:::'
+    return data.split(':')[1].split('$')[2]
+
+def answer17(data):
+    # 'Add the string "Pywars rocks" to the end of the list in the data element.  Submit the new list. '
+    data.append("Pywars rocks")
+    return data
+
+def answer18(data):
+    # 'Add up all the numbers in the list and submit the total. '
+    return sum(data) 
+
+def answer19(data):
+    # 'Given a string that contains numbers separated by spaces, add up the numbers and submit the sum.  "1 1 1" -> 3 '
+    return sum(map(int, data.split())) 
+
+def answer20(data):
+    # 'Create a string by joining together the words "this","python","stuff","really","is","fun" by the character in .data().
+    return data.join(["this", "python", "stuff", "really", "is", "fun"])
 
 def main():
     print("#1", d.answer(1, answer1(d.data(1))))
@@ -64,7 +99,14 @@ def main():
     print("#10", d.answer(10, answer10(d.data(10))))
     print("#11", d.answer(11, answer11(d.data(11))))
     print("#12", d.answer(12, answer12(d.data(12))))
-
+    print("#13", d.answer(13, answer13(d.data(13))))
+    print("#14", d.answer(14, answer14(d.data(14))))
+    print("#15", d.answer(15, answer15(d.data(15))))
+    print("#16", d.answer(16, answer16(d.data(16))))
+    print("#17", d.answer(17, answer17(d.data(17))))
+    print("#18", d.answer(18, answer18(d.data(18))))
+    print("#19", d.answer(19, answer19(d.data(19))))
+    print("#20", d.answer(20, answer20(d.data(20))))
 if __name__ == "__main__":
     d = pyWars.exercise()
     d.login("YourUsername","YourPassword")
