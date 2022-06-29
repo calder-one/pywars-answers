@@ -86,6 +86,20 @@ def answer20(data):
     # 'Create a string by joining together the words "this","python","stuff","really","is","fun" by the character in .data().
     return data.join(["this", "python", "stuff", "really", "is", "fun"])
 
+def answer21(data):
+    # 'The answer is the list of numbers between 1 and 1000 that are evenly divisible by the number provided.  2->[2,4,6,8..] 4->[4,8,16..] '
+    return list(range(0,1001,data)[1:])
+
+def answer22(data):
+    answer = ""
+    for eachhex in data:
+        ascii_char = chr(int(eachhex, 16))
+        answer = answer + ascii_char
+    return answer
+
+def answer23(data):
+    return sorted(set(data[0] + data[1]))
+
 def main():
     print("#1", d.answer(1, answer1(d.data(1))))
     print("#2", d.answer(2, answer2(d.data(2))))
@@ -107,6 +121,10 @@ def main():
     print("#18", d.answer(18, answer18(d.data(18))))
     print("#19", d.answer(19, answer19(d.data(19))))
     print("#20", d.answer(20, answer20(d.data(20))))
+    print("#21", d.answer(21, answer21(d.data(21))))
+    print("#22", d.answer(22, answer22(d.data(22))))
+    print("#23", d.answer(23, answer23(d.data(23)))) 
+
 if __name__ == "__main__":
     d = pyWars.exercise()
     d.login("YourUsername","YourPassword")
