@@ -91,6 +91,7 @@ def answer21(data):
     return list(range(0,1001,data)[1:])
 
 def answer22(data):
+    # 'Given a list of hexadecimal digits return a string that is made from their ASCII characters.  Ex [41 4f] -> "AO" '
     answer = ""
     for eachhex in data:
         ascii_char = chr(int(eachhex, 16))
@@ -98,6 +99,7 @@ def answer22(data):
     return answer
 
 def answer23(data):
+    # 'You will be given a list that contains two lists.  Combine the two lists and eliminate duplicates.  The answer is the SORTED combined list.  [[d,b,a,c][b,d]] -> [a,b,c,d] '
     return sorted(set(data[0] + data[1]))
 
 def main():
