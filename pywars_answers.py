@@ -102,6 +102,26 @@ def answer23(data):
     # 'You will be given a list that contains two lists.  Combine the two lists and eliminate duplicates.  The answer is the SORTED combined list.  [[d,b,a,c][b,d]] -> [a,b,c,d] '
     return sorted(set(data[0] + data[1]))
 
+def answer27(data):
+    # 'Data contains a dictionary.  Submit a SORTED list of all of the keys in the dictionary. '
+    return sorted(data.keys())
+
+def answer28(data):
+    # 'Data contains a dictionary.  Submit a SORTED list of all of the values in the dictionary.'
+    return sorted(data.values())
+
+def answer29(data):
+    # 'Data contains a dictionary.  Submit a SORTED list of tuples.  There should be one tuple for each entry in the dictionary. Each tuple should contain a key and its associated value from the dictionary.'
+    return sorted(data.items())
+
+def answer30(data):
+    # 'Data contains a dictionary.  Add together the integers stored in the dictionary entries with the keys "python" and "rocks" and submit their sum. '
+    return data.get("python") + data.get("rocks")
+
+def answer31(data):
+
+    return data.get("6-2017").get("Vista")
+
 def main():
     print("#1", d.answer(1, answer1(d.data(1))))
     print("#2", d.answer(2, answer2(d.data(2))))
@@ -125,7 +145,12 @@ def main():
     print("#20", d.answer(20, answer20(d.data(20))))
     print("#21", d.answer(21, answer21(d.data(21))))
     print("#22", d.answer(22, answer22(d.data(22))))
-    print("#23", d.answer(23, answer23(d.data(23)))) 
+    print("#23", d.answer(23, answer23(d.data(23))))
+    print("#27", d.answer(27, answer27(d.data(27)))) 
+    print("#28", d.answer(28, answer28(d.data(28))))
+    print("#29", d.answer(29, answer29(d.data(29))))
+    print("#30", d.answer(30, answer30(d.data(30))))
+    print("#31", d.answer(31, answer31(d.data(31))))
 
 if __name__ == "__main__":
     d = pyWars.exercise()
