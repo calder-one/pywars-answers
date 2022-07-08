@@ -1,0 +1,24 @@
+
+** (lightdm-gtk-greeter:27295): WARNING **: Failed to load user image: Failed to open file '/home/student/.face': No such file or directory
+g_dbus_connection_real_closed: Remote peer vanished with error: Underlying GIOStream returned 0 bytes on an async read (g-io-error-quark, 0). Exiting.
+init: indicator-messages main process ended, respawning
+init: indicator-power main process (27329) killed by TERM signal
+init: indicator-power main process ended, respawning
+init: indicator-application main process (27338) killed by TERM signal
+init: indicator-application main process ended, respawning
+init: indicator-sound main process ended, respawning
+init: indicator-application main process ended, respawning
+init: indicator-application respawning too fast, stopped
+init: indicator-messages main process ended, respawning
+init: indicator-power main process ended, respawning
+init: indicator-messages respawning too fast, stopped
+init: indicator-power main process ended, respawning
+init: indicator-power main process ended, respawning
+init: indicator-power main process ended, respawning
+init: indicator-power main process ended, respawning
+init: indicator-power main process ended, respawning
+init: indicator-power main process ended, respawning
+init: indicator-power main process ended, respawning
+init: indicator-power main process ended, respawning
+init: indicator-power respawning too fast, stopped
+init: job indicator-sound failed to stop

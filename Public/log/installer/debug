@@ -1,0 +1,21 @@
+Ubiquity 2.18.7
+Gtk-Message: Failed to load module "overlay-scrollbar"
+Gtk-Message: Failed to load module "overlay-scrollbar"
+
+(ubiquity:1910): Gtk-CRITICAL **: gtk_radio_button_set_group: assertion '!g_slist_find (group, radio_button)' failed
+
+(ubiquity:1910): Gtk-CRITICAL **: gtk_radio_button_set_group: assertion '!g_slist_find (group, radio_button)' failed
+No such schema 'org.gnome.libgnomekbd.keyboard'
+update_release_notes_label()
+update_release_notes_label()
+No such schema 'com.canonical.indicator.session'
+No such schema 'com.canonical.indicator.session'
+No such schema 'com.canonical.indicator.session'
+/usr/lib/ubiquity/plugins/ubi-console-setup.py:72: Warning: Source ID 484 was not found when attempting to remove it
+  GLib.source_remove(self.keyboard_layout_timeout_id)
+/usr/lib/ubiquity/plugins/ubi-console-setup.py:74: Warning: Source ID 486 was not found when attempting to remove it
+  GLib.source_remove(self.keyboard_variant_timeout_id)
+/usr/lib/ubiquity/plugins/ubi-usersetup.py:408: Warning: Source ID 780 was not found when attempting to remove it
+  GLib.source_remove(self.hostname_timeout_id)
+/usr/lib/ubiquity/plugins/ubi-usersetup.py:408: Warning: Source ID 804 was not found when attempting to remove it
+  GLib.source_remove(self.hostname_timeout_id)
