@@ -119,8 +119,12 @@ def answer30(data):
     return data.get("python") + data.get("rocks")
 
 def answer31(data):
-
+    #Data contains a dictionary of dictionaries.  The outer dictionary contains dates in the format of Month-Year.  The value for each of those entries is another dictionary.  That dictionary contains Operating System classes as the key and its percentage of use in the target organization as the value.  What percentage of the attack surface was 'Vista' in '6-2017'?
     return data.get("6-2017").get("Vista")
+
+def answer33(data):
+    # Data() contains the absolute path of a filename in your virtual machine.   Determine the length of the file at that path. Open and read the contents of the file. Submit the file size (length of contents) as the answer
+    return len(open(d.data(33)).read())
 
 def main():
     print("#1", d.answer(1, answer1(d.data(1))))
@@ -151,7 +155,7 @@ def main():
     print("#29", d.answer(29, answer29(d.data(29))))
     print("#30", d.answer(30, answer30(d.data(30))))
     print("#31", d.answer(31, answer31(d.data(31))))
-
+    print("#33", d.answer(33, answer33(d.data(33))))
 if __name__ == "__main__":
     d = pyWars.exercise()
     d.login("YourUsername","YourPassword")
