@@ -2,6 +2,7 @@ from __future__ import print_function
 #import pyWars
 import local_pyWars as pyWars
 import codecs
+import os
 
 def answer1(datasample):
     # 'ROT-13 encode the .data() string. For example ABCDEFG becomes NOPQRST '
@@ -126,6 +127,10 @@ def answer33(data):
     # Data() contains the absolute path of a filename in your virtual machine.   Determine the length of the file at that path. Open and read the contents of the file. Submit the file size (length of contents) as the answer
     return len(open(d.data(33)).read())
 
+def answer34(data):
+    # The data() method returns an abosolute path to a directory on your file system.  Submit a sorted list of the filenames in that directory.
+    return sorted(os.listdir(data))
+
 def main():
     print("#1", d.answer(1, answer1(d.data(1))))
     print("#2", d.answer(2, answer2(d.data(2))))
@@ -156,6 +161,8 @@ def main():
     print("#30", d.answer(30, answer30(d.data(30))))
     print("#31", d.answer(31, answer31(d.data(31))))
     print("#33", d.answer(33, answer33(d.data(33))))
+    print("#34", d.answer(34, answer34(d.data(34))))
+    
 if __name__ == "__main__":
     d = pyWars.exercise()
     d.login("YourUsername","YourPassword")
