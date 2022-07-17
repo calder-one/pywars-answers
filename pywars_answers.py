@@ -3,6 +3,7 @@ from __future__ import print_function
 import local_pyWars as pyWars
 import codecs
 import os
+import gzip
 
 def answer1(datasample):
     # 'ROT-13 encode the .data() string. For example ABCDEFG becomes NOPQRST '
@@ -125,11 +126,18 @@ def answer31(data):
 
 def answer33(data):
     # Data() contains the absolute path of a filename in your virtual machine.   Determine the length of the file at that path. Open and read the contents of the file. Submit the file size (length of contents) as the answer
-    return len(open(d.data(33)).read())
+    return len(open(data).read())
 
 def answer34(data):
     # The data() method returns an abosolute path to a directory on your file system.  Submit a sorted list of the filenames in that directory.
     return sorted(os.listdir(data))
+
+def answer35(data):
+    # The Data() method will return a tuple.  The first item in the tuple contains the absolute path of a gzip compressed file in your virtual machine.  The second item in the tuple is a line number.  Retreieve that line number from the specified file and submit it as the answer.
+    file, line = data
+    list_lines = gzip.open(file, "rt").readlines()
+    return list_lines[line - 1]
+
 
 def main():
     print("#1", d.answer(1, answer1(d.data(1))))
@@ -162,7 +170,8 @@ def main():
     print("#31", d.answer(31, answer31(d.data(31))))
     print("#33", d.answer(33, answer33(d.data(33))))
     print("#34", d.answer(34, answer34(d.data(34))))
-    
+    print("#35", d.answer(35, answer35(d.data(35))))
+
 if __name__ == "__main__":
     d = pyWars.exercise()
     d.login("YourUsername","YourPassword")
